@@ -1,114 +1,293 @@
 ```css
+/* ===========================
+   Dr. Mujeeb Ahmad Website
+   =========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
-line-height:1.7;
-color:#222;
+    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.8;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-padding:25px 8%;
-background:white;
-position:sticky;
-top:0;
+/* Layout */
+
+.container{
+    display:flex;
+    min-height:100vh;
 }
 
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
+/* Sidebar */
+
+.sidebar{
+    width:320px;
+    min-height:100vh;
+    padding:40px 30px;
+    background:#fafafa;
+    border-right:1px solid #eaeaea;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    overflow-y:auto;
 }
 
-nav a{
-text-decoration:none;
-color:#222;
+.profile-image{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+
+    border-radius:12px;
+
+    display:block;
+    margin:0 auto 25px auto;
 }
 
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 10%;
-min-height:90vh;
+.sidebar h1{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:700;
+
+    margin-bottom:10px;
 }
 
-.hero img{
-width:320px;
-border-radius:20px;
+.position{
+    text-align:center;
+    color:#0066cc;
+    font-weight:600;
+
+    margin-bottom:15px;
 }
 
-.hero-text{
-max-width:600px;
+.institute{
+    text-align:center;
+    font-size:0.95rem;
+    color:#666;
+
+    margin-bottom:25px;
 }
 
-.hero h1{
-font-size:3rem;
-margin-bottom:10px;
+.social-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-.hero h2{
-color:#0066cc;
-margin-bottom:20px;
+.social-links a{
+    text-decoration:none;
+    color:#333;
+    padding:10px 12px;
+
+    border:1px solid #ddd;
+    border-radius:8px;
+
+    transition:0.3s;
 }
 
-.buttons{
-margin:25px 0;
+.social-links a:hover{
+    background:#0066cc;
+    color:white;
 }
 
-.btn{
-background:#0066cc;
-color:white;
-padding:12px 20px;
-text-decoration:none;
-border-radius:8px;
+/* Main Content */
+
+.content{
+    margin-left:320px;
+    width:calc(100% - 320px);
+    padding:40px 70px;
 }
 
-.social a{
-margin-right:15px;
-text-decoration:none;
+/* Navigation */
+
+.topnav{
+    display:flex;
+    gap:30px;
+
+    margin-bottom:50px;
+    padding-bottom:15px;
+
+    border-bottom:1px solid #e5e5e5;
 }
+
+.topnav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.topnav a:hover{
+    color:#0066cc;
+}
+
+/* Sections */
 
 section{
-padding:80px 10%;
+    margin-bottom:70px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
+section h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#111;
 }
 
-.card{
-padding:25px;
-background:#f5f5f5;
-border-radius:15px;
+section p{
+    margin-bottom:15px;
 }
+
+/* News */
+
+.news-list{
+    padding-left:20px;
+}
+
+.news-list li{
+    margin-bottom:12px;
+}
+
+/* Research Grid */
+
+.research-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.research-card{
+    background:white;
+
+    border:1px solid #e6e6e6;
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:0.3s;
+}
+
+.research-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.research-card img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+}
+
+.research-card h3{
+    padding:20px 20px 10px 20px;
+}
+
+.research-card p{
+    padding:0 20px 20px 20px;
+}
+
+/* Download Button */
+
+.download-btn{
+    display:inline-block;
+
+    background:#0066cc;
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+    border-radius:10px;
+
+    margin-top:10px;
+
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    background:#004fa3;
+}
+
+/* Footer */
 
 footer{
-text-align:center;
-padding:40px;
-background:#f5f5f5;
+    border-top:1px solid #e6e6e6;
+
+    padding-top:30px;
+
+    color:#777;
+    font-size:0.95rem;
+}
+
+/* Publication Cards */
+
+.pub-card{
+    border-left:4px solid #0066cc;
+    padding-left:20px;
+    margin-bottom:25px;
+}
+
+/* Contact Cards */
+
+.contact-box{
+    border:1px solid #e6e6e6;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        min-height:auto;
+        border-right:none;
+        border-bottom:1px solid #e6e6e6;
+    }
+
+    .content{
+        margin-left:0;
+        width:100%;
+        padding:30px;
+    }
+
+    .container{
+        flex-direction:column;
+    }
+
 }
 
 @media(max-width:768px){
 
-.hero{
-flex-direction:column;
-text-align:center;
-}
+    .topnav{
+        flex-wrap:wrap;
+        gap:15px;
+    }
 
-.hero img{
-margin-top:30px;
-width:220px;
-}
+    .content{
+        padding:25px;
+    }
+
+    section h2{
+        font-size:1.6rem;
+    }
 
 }
 ```
