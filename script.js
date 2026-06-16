@@ -1,1 +1,3 @@
-console.log("Website loaded successfully");
+```javascript
+console.log("Dr. Mujeeb Ahmad website loaded");
+```
