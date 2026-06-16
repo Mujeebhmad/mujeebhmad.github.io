@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:white;
+}
+
+.profile{
+    width:220px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:42px;
+}
+
+h2{
+    color:#0066cc;
+}
+
+.links{
+    margin-top:20px;
+}
+
+.links a{
+    margin:10px;
+    text-decoration:none;
+    color:#0066cc;
+    font-weight:bold;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
