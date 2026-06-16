@@ -187,9 +187,10 @@ section p{
 
 .research-card img{
     width:100%;
-    height:220px;
-
-    object-fit:cover;
+    height:180px;
+    object-fit:contain;
+    background:white;
+    padding:10px;
 }
 
 .research-card h3{
